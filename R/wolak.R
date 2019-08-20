@@ -1,4 +1,4 @@
-wolak <- function(data, increasing = TRUE, difference = FALSE, wolakRep = 100){
+wolak <- function(data, increasing = TRUE, difference = FALSE, wolakRep = 100, zero_treshold = 1e-6){
 
     if (missing(data)) {
     stop("Variable 'data' is missing.")
@@ -13,7 +13,11 @@ wolak <- function(data, increasing = TRUE, difference = FALSE, wolakRep = 100){
   }
 
   if(!(is.atomic(wolakRep) & length(wolakRep) == 1 & is.numeric(wolakRep))){
-    stop("The variable 'wolakReP' must be a numeric scalar.")
+    stop("The variable 'wolakRep' must be a numeric scalar.")
+  }
+  
+  if(!(is.atomic(zero_treshold) & length(zero_treshold) == 1 & is.numeric(zero_treshold))){
+    stop("The variable 'zero_treshold' must be a numeric scalar.")
   }
 
   if(!is(increasing,"logical")){
@@ -79,7 +83,11 @@ wolak <- function(data, increasing = TRUE, difference = FALSE, wolakRep = 100){
     mutilda1 <- mutilda1$par
 
     # counting how many elements of mutilda are greater than zero
-    temp <- sum(mutilda1>0)
+    # mutilda1 is the output of constrOptim and zeros are at the machine precision so they are not exact,
+    # therefore we would always count all coordinates of mutilda1 as positive if we just check mutilda1>0
+    # As a simple solution, we check against the default treshold of 1e-6 to get results like
+    # in Patton/Timmermann (JoE, 2010).
+    temp <- sum(mutilda1 > zero_treshold)
 
     # adding one more unit of weight to this element of the weight vector
     weights[1+temp] <- weights[1+temp] + 1/wolakRep
