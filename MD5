@@ -1,4 +1,4 @@
-64cc10617e02b9bfc42db82cfc5eefdf *DESCRIPTION
+33ffb4acb1a67c1791f559bb6675ae4d *DESCRIPTION
 a77c18f08d6f3d03246f13d51252247d *LICENSE
 30b839b5deaeede3a1d6c95889d5632e *NAMESPACE
 ca6f318ad35337775bbea2a0e19d962c *R/SB_variance.R
@@ -12,7 +12,7 @@ a5269471b0f053eea2bc619d66afcef4 *R/specify_decimal.R
 162025e335c9421f8a24ee88be7e0f49 *R/statBootstrap.R
 d554a4fc0dd5c3a617cff99b118613dc *R/wolak.R
 b50586b1f036886219dde2732d4d2f8f *THANKS
-9857e128eee4c123df8e6b8af7fde8de *build/partial.rdb
+42df336aaa96daf26b793b8566d8aed6 *build/partial.rdb
 891fbcbb431ca210a48e6c15032215d8 *data/demo_returns.rda
 7bb4426e3eec4a7758e38ff92abcfc1d *man/demo_returns.Rd
 662b4506f39db11844239345566e84f5 *man/monoBonferroni.Rd
@@ -22,7 +22,7 @@ cfd07d0cbfe02a72f75dff4904b6ba78 *man/monoSummary.Rd
 359eb0f43d6cbeddb0df270fa37ad630 *man/statBootstrap.Rd
 690a610e9da1e874de1790964846ec66 *man/wolak.Rd
 cd0e51bf4440809b39b805a505b2591f *tests/testthat.R
-3a0b682ab710c0973ad17d7c3dca326d *tests/testthat/test-matrix_conversion.R
+40593b66b2d3180d9f1052f9ab802e0e *tests/testthat/test-matrix_conversion.R
 ad98a542d2d7505d5d1c79f6ffa767c9 *tests/testthat/test-monoBonferroni.R
 31f8f02f4fd6fac72e01badb1582a031 *tests/testthat/test-monoRelation.R
 6186eda1ffab7859e1c9fd052703bc16 *tests/testthat/test-monoSummary.R
